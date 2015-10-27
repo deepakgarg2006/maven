@@ -1,0 +1,50 @@
+{
+              "status": "ok",
+                "statusCode": 000"
+                "statusDescription": "successful",
+                "details": {
+  "Customer": {
+    "ClientID": "123",
+    "VendorID": "1234",
+    "VendorKey": "77777jjjj",
+    "ProgramID": "A5678",
+    "SubProgramID": "AAS780",
+    "EmailAddress": "aaa@gmail.com",
+    "FirstName": "ABC",
+    "LastName": "DEF",
+    "DOB": "05-MAR-1999",
+    "AddressLine1": "Noida",
+    "AddressLine2": "Country",
+    "City": "Noida",
+    "State": "UP",
+    "PostalCode": "123678",
+    "PhoneNumber": "77777777",
+    "UserID": "a22",
+    "CreateDate": "05-OCT-2015 09:23:12 AM",
+    "Age": "44",
+    "IP": "kjj44",
+    "Source": "desktop",
+    "Culture": "aa",
+    "EntryCode": "ddd",
+    "EntryCodeType": "dddd",
+    "Redemption": "swq",
+    "RedeemedAt": "asas",
+    "ExternalInfo": "asa",
+    "CultureInfo": "Y",
+    "InactiveIndicator": "ooii",
+    "Subscriptions": {
+      "Subscription": {
+        "ID": "666"
+      }
+    },
+    "NVPairs": {
+      "NVPair": {
+        "Name": "aaa"
+      }
+    },
+    "SourceApp": "ffff",
+    "SourceKey": "lklk",
+    "SourceSendDate": "09-OCT-2015"
+  }
+}
+}

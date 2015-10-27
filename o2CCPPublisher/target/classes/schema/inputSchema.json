@@ -1,0 +1,105 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "id": "http://jsonschema.net",
+    "type": "object",
+    "properties": {
+        "Customer": {
+            "id": "http://jsonschema.net/Customer",
+            "type": "object",
+            "properties": {
+                "email": {
+                    "id": "http://jsonschema.net/Customer/email",
+                    "type": "string",
+                    "format": "email"
+                },
+                "forename": {
+                    "id": "http://jsonschema.net/Customer/forename",
+                    "type": "string"
+                },
+                "surname": {
+                    "id": "http://jsonschema.net/Customer/surname",
+                    "type": "string"
+                },
+                "dob": {
+                    "id": "http://jsonschema.net/Customer/dob",
+                    "type": "string"
+                },
+                "postcode": {
+                    "id": "http://jsonschema.net/Customer/postcode",
+                    "type": "string",
+                    "maxLength": 5,
+					"minLength": 5
+                },
+                "telephone": {
+                    "id": "http://jsonschema.net/Customer/telephone",
+                    "type": "string",
+                    "pattern": "[1-9][0-9]{9}"
+                },
+                "dateRegistered": {
+                    "id": "http://jsonschema.net/Customer/dateRegistered",
+                    "type": "string"
+                }
+            },
+            "anyOf": [
+                {
+                    "allOf": [
+                        {
+                            "required": [
+                                "telephone"
+                            ]
+                        },
+                        {
+                            "required": [
+                                "email"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "oneOf": [
+                        {
+                            "required": [
+                                "telephone"
+                            ]
+                        },
+                        {
+                            "required": [
+                                "email"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "Venue": {
+            "id": "http://jsonschema.net/Venue",
+            "type": "object",
+            "properties": {
+                "ClientIp": {
+                    "id": "http://jsonschema.net/Venue/ClientIp",
+                    "type": "string"
+                }
+            }
+        },
+        "Device": {
+            "id": "http://jsonschema.net/Device",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "id": "http://jsonschema.net/Device/name",
+                    "type": "string",
+                    "enum": [
+                        "desktop",
+                        "mobile",
+                        "tablet"
+                    ]
+                }
+            }
+        }
+    },
+    "required": [
+        "Customer",
+        "Venue",
+        "Device"
+    ]
+}

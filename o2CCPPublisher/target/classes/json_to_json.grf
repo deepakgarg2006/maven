@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><Graph __version="3.5.0" author="deepak_ga" created="Mon Oct 12 13:13:27 IST 2015" description="JSON To JSON" guiVersion="3.4.4.P" id="1444641314716" licenseCode="Unlicensed" licenseType="Unknown" modified="Mon Oct 12 13:13:27 IST 2015" modifiedBy="deepak_ga" name="JSON_To_JSON" preview-file="D:/MCD/Mule/CCP-MCMD/O2/schema/sampleInput.json" revision="1.0" showComponentDetails="false">
+<Global>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object" _dataStructure="OBJECT" _id="__id" _type="Input" id="c1dcb8a8-20dd-411a-838b-4d178079ac9f">
+<Record fieldDelimiter="," name="object" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __sourcePath="{}/object/Customer/email" containerType="SINGLE" label="email" name="email" type="string"/>
+<Field __index="1" __sourcePath="{}/object/Customer/forename" containerType="SINGLE" label="forename" name="forename" type="string"/>
+<Field __index="2" __sourcePath="{}/object/Customer/surname" containerType="SINGLE" label="surname" name="surname" type="string"/>
+<Field __index="3" __sourcePath="{}/object/Customer/dob" containerType="SINGLE" label="dob" name="dob" type="string"/>
+<Field __index="4" __sourcePath="{}/object/Customer/postcode" containerType="SINGLE" label="postcode" name="postcode" type="string"/>
+<Field __index="5" __sourcePath="{}/object/Customer/telephone" containerType="SINGLE" label="telephone" name="telephone" type="string"/>
+<Field __index="6" __sourcePath="{}/object/Venue/ClientIp" containerType="SINGLE" label="ClientIp" name="ClientIp" type="string"/>
+<Field __index="7" __sourcePath="{}/object/Device/name" containerType="SINGLE" label="name" name="name" type="string"/>
+</Record>
+</Metadata>
+<Metadata __index="0" __referenceCounter="1" __sourcePath="{}/object" _dataStructure="OBJECT" _id="__id" _type="Output" id="fe5a7474-e29a-4f2c-b250-99349a8bf1ec">
+<Record fieldDelimiter="," name="object" recordDelimiter="\n\\|\r\n\\|\r" type="delimited">
+<Field __artificialType="_id" __systemManaged="true" name="__id" type="string"/>
+<Field __index="0" __sourcePath="{}/object/Customer/ClientID" containerType="SINGLE" label="ClientID" name="ClientID" type="string"/>
+<Field __index="1" __sourcePath="{}/object/Customer/VendorID" containerType="SINGLE" label="VendorID" name="VendorID" type="string"/>
+<Field __index="2" __sourcePath="{}/object/Customer/VendorKey" containerType="SINGLE" label="VendorKey" name="VendorKey" type="string"/>
+<Field __index="3" __sourcePath="{}/object/Customer/ProgramID" containerType="SINGLE" label="ProgramID" name="ProgramID" type="string"/>
+<Field __index="4" __sourcePath="{}/object/Customer/SubProgramID" containerType="SINGLE" label="SubProgramID" name="SubProgramID" type="string"/>
+<Field __index="5" __sourcePath="{}/object/Customer/EmailAddress" containerType="SINGLE" label="EmailAddress" name="EmailAddress" type="string"/>
+<Field __index="6" __sourcePath="{}/object/Customer/FirstName" containerType="SINGLE" label="FirstName" name="FirstName" type="string"/>
+<Field __index="7" __sourcePath="{}/object/Customer/LastName" containerType="SINGLE" label="LastName" name="LastName" type="string"/>
+<Field __index="8" __sourcePath="{}/object/Customer/DOB" containerType="SINGLE" label="DOB" name="DOB" type="string"/>
+<Field __index="9" __sourcePath="{}/object/Customer/AddressLine1" containerType="SINGLE" label="AddressLine1" name="AddressLine1" type="string"/>
+<Field __index="10" __sourcePath="{}/object/Customer/AddressLine2" containerType="SINGLE" label="AddressLine2" name="AddressLine2" type="string"/>
+<Field __index="11" __sourcePath="{}/object/Customer/City" containerType="SINGLE" label="City" name="City" type="string"/>
+<Field __index="12" __sourcePath="{}/object/Customer/State" containerType="SINGLE" label="State" name="State" type="string"/>
+<Field __index="13" __sourcePath="{}/object/Customer/PostalCode" containerType="SINGLE" label="PostalCode" name="PostalCode" type="string"/>
+<Field __index="14" __sourcePath="{}/object/Customer/PhoneNumber" containerType="SINGLE" label="PhoneNumber" name="PhoneNumber" type="string"/>
+<Field __index="15" __sourcePath="{}/object/Customer/UserID" containerType="SINGLE" label="UserID" name="UserID" type="string"/>
+<Field __index="16" __sourcePath="{}/object/Customer/CreateDate" containerType="SINGLE" label="CreateDate" name="CreateDate" type="string"/>
+<Field __index="17" __sourcePath="{}/object/Customer/Age" containerType="SINGLE" label="Age" name="Age" type="string"/>
+<Field __index="18" __sourcePath="{}/object/Customer/IP" containerType="SINGLE" label="IP" name="IP" type="string"/>
+<Field __index="19" __sourcePath="{}/object/Customer/Source" containerType="SINGLE" label="Source" name="Source" type="string"/>
+<Field __index="20" __sourcePath="{}/object/Customer/Culture" containerType="SINGLE" label="Culture" name="Culture" type="string"/>
+<Field __index="21" __sourcePath="{}/object/Customer/EntryCode" containerType="SINGLE" label="EntryCode" name="EntryCode" type="string"/>
+<Field __index="22" __sourcePath="{}/object/Customer/EntryCodeType" containerType="SINGLE" label="EntryCodeType" name="EntryCodeType" type="string"/>
+<Field __index="23" __sourcePath="{}/object/Customer/Redemption" containerType="SINGLE" label="Redemption" name="Redemption" type="string"/>
+<Field __index="24" __sourcePath="{}/object/Customer/RedeemedAt" containerType="SINGLE" label="RedeemedAt" name="RedeemedAt" type="string"/>
+<Field __index="25" __sourcePath="{}/object/Customer/ExternalInfo" containerType="SINGLE" label="ExternalInfo" name="ExternalInfo" type="string"/>
+<Field __index="26" __sourcePath="{}/object/Customer/CultureInfo" containerType="SINGLE" label="CultureInfo" name="CultureInfo" type="string"/>
+<Field __index="27" __sourcePath="{}/object/Customer/InactiveIndicator" containerType="SINGLE" label="InactiveIndicator" name="InactiveIndicator" type="string"/>
+<Field __index="28" __sourcePath="{}/object/Customer/Subscriptions/Subscription/ID" containerType="SINGLE" label="ID" name="ID" type="string"/>
+<Field __index="29" __sourcePath="{}/object/Customer/NVPairs/NVPair/Name" containerType="SINGLE" label="Name" name="Name" type="string"/>
+<Field __index="30" __sourcePath="{}/object/Customer/SourceApp" containerType="SINGLE" label="SourceApp" name="SourceApp" type="string"/>
+<Field __index="31" __sourcePath="{}/object/Customer/SourceKey" containerType="SINGLE" label="SourceKey" name="SourceKey" type="string"/>
+<Field __index="32" __sourcePath="{}/object/Customer/SourceSendDate" containerType="SINGLE" label="SourceSendDate" name="SourceSendDate" type="string"/>
+</Record>
+</Metadata>
+<Dictionary>
+<Entry id="DictionaryEntry0" input="true" name="inputPayload" output="false" type="object"/>
+<Entry id="DictionaryEntry1" input="false" name="outputPayload" output="true" type="object"/>
+</Dictionary>
+</Global>
+<Phase number="0">
+<Node enabled="enabled" guiName="Foreach 'object' -&gt; 'object'" guiX="460" guiY="20" id="FOREACH_OBJECT_OBJECT" transformClass="com.mulesoft.datamapper.transform.MelRecordTransform" type="REFORMAT">
+<attr name="melScript"><![CDATA[//MEL
+//START -> DO NOT REMOVE
+output.__id = input.__id;
+//END -> DO NOT REMOVE
+output.EmailAddress = input.email;
+output.ClientID = 'MCDS';
+output.VendorID = 'TBD';
+output.VendorKey = 'TBD';]]></attr>
+</Node>
+<Node charset="UTF-8" enabled="enabled" fileURL="dict:inputPayload" guiName="JSON READER" guiX="20" guiY="20" id="JSON_READER0" type="JSON_READER">
+<attr name="__isJsonSchema"><![CDATA[false]]></attr>
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Context xpath="/root">
+  <Context outPort="0" sequenceField="__id" xpath="object">
+    <Mapping cloverField="email" trim="true" xpath="Customer/email"/>
+    <Mapping cloverField="forename" trim="true" xpath="Customer/forename"/>
+    <Mapping cloverField="surname" trim="true" xpath="Customer/surname"/>
+    <Mapping cloverField="dob" trim="true" xpath="Customer/dob"/>
+    <Mapping cloverField="postcode" trim="true" xpath="Customer/postcode"/>
+    <Mapping cloverField="telephone" trim="true" xpath="Customer/telephone"/>
+    <Mapping cloverField="ClientIp" trim="true" xpath="Venue/ClientIp"/>
+    <Mapping cloverField="name" trim="true" xpath="Device/name"/>
+  </Context>
+</Context>
+]]></attr>
+<attr name="_data_format"><![CDATA[JSON]]></attr>
+<attr name="jsonSchemaURL"><![CDATA[D:/MCD/Mule/CCP-MCMD/O2/schema/sampleInput.json]]></attr>
+</Node>
+<Node cacheInMemory="true" charset="UTF-8" enabled="enabled" fileURL="dict:outputPayload" guiName="JSON WRITER" guiX="900" guiY="20" id="JSON_WRITER0" type="JSON_WRITER">
+<attr name="__isJsonSchema"><![CDATA[false]]></attr>
+<attr name="mapping"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<object xmlns:clover="http://www.cloveretl.com/ns/xmlmapping" clover:inPort="0">
+  <Customer>
+    <ClientID>$0.ClientID</ClientID>
+    <VendorID>$0.VendorID</VendorID>
+    <VendorKey>$0.VendorKey</VendorKey>
+    <ProgramID>$0.ProgramID</ProgramID>
+    <SubProgramID>$0.SubProgramID</SubProgramID>
+    <EmailAddress>$0.EmailAddress</EmailAddress>
+    <FirstName>$0.FirstName</FirstName>
+    <LastName>$0.LastName</LastName>
+    <DOB>$0.DOB</DOB>
+    <AddressLine1>$0.AddressLine1</AddressLine1>
+    <AddressLine2>$0.AddressLine2</AddressLine2>
+    <City>$0.City</City>
+    <State>$0.State</State>
+    <PostalCode>$0.PostalCode</PostalCode>
+    <PhoneNumber>$0.PhoneNumber</PhoneNumber>
+    <UserID>$0.UserID</UserID>
+    <CreateDate>$0.CreateDate</CreateDate>
+    <Age>$0.Age</Age>
+    <IP>$0.IP</IP>
+    <Source>$0.Source</Source>
+    <Culture>$0.Culture</Culture>
+    <EntryCode>$0.EntryCode</EntryCode>
+    <EntryCodeType>$0.EntryCodeType</EntryCodeType>
+    <Redemption>$0.Redemption</Redemption>
+    <RedeemedAt>$0.RedeemedAt</RedeemedAt>
+    <ExternalInfo>$0.ExternalInfo</ExternalInfo>
+    <CultureInfo>$0.CultureInfo</CultureInfo>
+    <InactiveIndicator>$0.InactiveIndicator</InactiveIndicator>
+    <Subscriptions>
+      <Subscription>
+        <ID>$0.ID</ID>
+      </Subscription>
+    </Subscriptions>
+    <NVPairs>
+      <NVPair>
+        <Name>$0.Name</Name>
+      </NVPair>
+    </NVPairs>
+    <SourceApp>$0.SourceApp</SourceApp>
+    <SourceKey>$0.SourceKey</SourceKey>
+    <SourceSendDate>$0.SourceSendDate</SourceSendDate>
+  </Customer>
+</object>]]></attr>
+<attr name="_data_format"><![CDATA[JSON]]></attr>
+<attr name="jsonSchemaURL"><![CDATA[D:/MCD/Mule/CCP-MCMD/example.json]]></attr>
+</Node>
+<Edge debugMode="true" fromNode="FOREACH_OBJECT_OBJECT:0" guiBendpoints="" id="Edge1" inPort="Port 0 (in)" metadata="fe5a7474-e29a-4f2c-b250-99349a8bf1ec" outPort="Port 0 (out)" toNode="JSON_WRITER0:0"/>
+<Edge debugMode="true" fromNode="JSON_READER0:0" guiBendpoints="" id="Edge0" inPort="Port 0 (in)" metadata="c1dcb8a8-20dd-411a-838b-4d178079ac9f" outPort="Port 0 (out)" toNode="FOREACH_OBJECT_OBJECT:0"/>
+</Phase>
+</Graph>

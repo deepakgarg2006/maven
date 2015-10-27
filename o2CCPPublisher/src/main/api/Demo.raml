@@ -1,0 +1,19 @@
+#%RAML 0.8
+---
+title: Demo exam details
+version: 1
+baseUri: http://localhost:8082/api/v{version}/exam_details
+/getData:
+   displayName: get exam details data
+   post: 
+    description: Exam Data request
+    body:
+      application/json: 
+        schema: !include schema/request.schema.json
+        example: !include schema/request.json
+    responses: 
+      200:
+        body: 
+          application/json: 
+            schema: !include schema/response.schema.json
+            example: !include schema/response.json

@@ -1,0 +1,17 @@
+{
+    "Customer": {
+        "email": "deepak_ga@hcl.com",
+        "forename": "Deepak",
+        "surname": "Garg",
+        "dob": "15-Mar-1985",
+        "postcode": "301201",
+        "telephone": "978678678",
+        "dateRegistered": null
+    },
+    "Venue": {
+        "ClientIp": "112.234.567.890"
+    },
+    "Device": {
+        "name": "mobile"
+    }
+}

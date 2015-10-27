@@ -1,0 +1,240 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "http://jsonschema.net",
+  "type": "object",
+  "properties": {
+    "Customer": {
+      "id": "http://jsonschema.net/Customer",
+      "type": "object",
+      "properties": {
+        "ClientID": {
+          "id": "http://jsonschema.net/Customer/ClientID",
+          "type": "string",
+          "maxLength": 4
+        },
+        "VendorID": {
+          "id": "http://jsonschema.net/Customer/VendorID",
+          "type": "string",
+          "maxLength": 8
+        },
+        "VendorKey": {
+          "id": "http://jsonschema.net/Customer/VendorKey",
+          "type": "string",
+          "maxLength": 64
+        },
+        "ProgramID": {
+          "id": "http://jsonschema.net/Customer/ProgramID",
+          "type": "string",
+          "maxLength": 20
+        },
+        "SubProgramID": {
+          "id": "http://jsonschema.net/Customer/SubProgramID",
+          "type": "string",
+          "maxLength": 10
+        },
+        "EmailAddress": {
+          "id": "http://jsonschema.net/Customer/EmailAddress",
+          "type": "string",
+          "format":"email",
+          "maxLength": 80      
+          
+        },
+        "FirstName": {
+        "id":"FirstName",
+        "type": "string",
+          "maxLength": 30
+          
+        },
+        "LastName": {
+          "id": "http://jsonschema.net/Customer/LastName",
+          "type": "string",
+          "maxLength": 30
+        },
+        "DOB": {
+          "id": "http://jsonschema.net/Customer/DOB",
+          "type": "string",
+          "maxLength": 11
+        },
+        "AddressLine1": {
+          "id": "http://jsonschema.net/Customer/AddressLine1",
+          "type": "string",
+          "maxLength": 40
+        },
+        "AddressLine2": {
+          "id": "http://jsonschema.net/Customer/AddressLine2",
+          "type": "string",
+          "maxLength": 40
+        },
+        "City": {
+          "id": "http://jsonschema.net/Customer/City",
+          "type": "string",
+          "maxLength": 30
+        },
+        "State": {
+          "id": "http://jsonschema.net/Customer/State",
+          "type": "string",
+          "maxLength": 2
+        },
+        "PostalCode": {
+          "id": "http://jsonschema.net/Customer/PostalCode",
+          "type": "string",
+          "pattern":"[1-9]",
+          "maxLength": 5,
+          "minLength": 5
+        },
+        "PhoneNumber": {
+          "id": "http://jsonschema.net/Customer/PhoneNumber",
+          "type": "string",
+          "pattern":"[1-9]",
+          "maxLength": 10,
+          "minLength": 10,
+          "description":"PhoneNumber"
+        },
+        "UserID": {
+          "id": "http://jsonschema.net/Customer/UserID",
+          "type": "string",
+          "maxLength": 50
+        },
+        "CreateDate": {
+          "id": "http://jsonschema.net/Customer/CreateDate",
+          "type": "string",
+          "maxLength": 23
+        },
+        "Age": {
+          "id": "http://jsonschema.net/Customer/Age",
+          "type": "string",
+          "maxLength": 3
+        },
+        "IP": {
+          "id": "http://jsonschema.net/Customer/IP",
+          "type": "string",
+          "maxLength": 20
+        },
+        "Source": {
+          "id": "http://jsonschema.net/Customer/Source",
+          "type": "string",
+          "maxLength": 10
+        },
+        "Culture": {
+          "id": "http://jsonschema.net/Customer/Culture",
+          "type": "string",
+          "maxLength": 10
+        },
+        "EntryCode": {
+          "id": "http://jsonschema.net/Customer/EntryCode",
+          "type": "string",
+          "maxLength": 20
+        },
+        "EntryCodeType": {
+          "id": "http://jsonschema.net/Customer/EntryCodeType",
+          "type": "string",
+          "maxLength": 20
+        },
+        "Redemption": {
+          "id": "http://jsonschema.net/Customer/Redemption",
+          "type": "string",
+          "maxLength": 20
+        },
+        "RedeemedAt": {
+          "id": "http://jsonschema.net/Customer/RedeemedAt",
+          "type": "string",
+          "maxLength": 50
+        },
+        "ExternalInfo": {
+          "id": "http://jsonschema.net/Customer/ExternalInfo",
+          "type": "string"
+        },
+        "CultureInfo": {
+          "id": "http://jsonschema.net/Customer/CultureInfo",
+          "type": "string"
+        },
+        "InactiveIndicator": {
+          "id": "http://jsonschema.net/Customer/InactiveIndicator",
+          "type": "string"
+        },
+        "Subscriptions": {
+          "id": "http://jsonschema.net/Customer/Subscriptions",
+          "type": "object",
+          "properties": {
+            "Subscription": {
+              "id": "http://jsonschema.net/Customer/Subscriptions/Subscription",
+              "type": "object",
+              "properties": {
+                "ID": {
+                  "id": "http://jsonschema.net/Customer/Subscriptions/Subscription/ID",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "NVPairs": {
+          "id": "http://jsonschema.net/Customer/NVPairs",
+          "type": "object",
+          "properties": {
+            "NVPair": {
+              "id": "http://jsonschema.net/Customer/NVPairs/NVPair",
+              "type": "object",
+              "properties": {
+                "Name": {
+                  "id": "http://jsonschema.net/Customer/NVPairs/NVPair/Name",
+                  "type": "string"
+                }
+              }
+            }
+          }
+        },
+        "SourceApp": {
+          "id": "http://jsonschema.net/Customer/SourceApp",
+          "type": "string"
+        },
+        "SourceKey": {
+          "id": "http://jsonschema.net/Customer/SourceKey",
+          "type": "string"
+        },
+        "SourceSendDate": {
+          "id": "http://jsonschema.net/Customer/SourceSendDate",
+          "type": "string"
+        }
+      },
+      "required": [
+        "ClientID",
+        "VendorID",
+        "VendorKey",
+        "ProgramID",
+        "SubProgramID",
+        "EmailAddress",
+        "FirstName",
+        "LastName",
+        "DOB",
+        "AddressLine1",
+        "AddressLine2",
+        "City",
+        "State",
+        "PostalCode",
+        "PhoneNumber",
+        "UserID",
+        "CreateDate",
+        "Age",
+        "IP",
+        "Source",
+        "Culture",
+        "EntryCode",
+        "EntryCodeType",
+        "Redemption",
+        "RedeemedAt",
+        "ExternalInfo",
+        "CultureInfo",
+        "InactiveIndicator",
+        "Subscriptions",
+        "NVPairs",
+        "SourceApp",
+        "SourceKey",
+        "SourceSendDate"
+      ]
+    }
+  },
+  "required": [
+    "Customer"
+  ]
+}
