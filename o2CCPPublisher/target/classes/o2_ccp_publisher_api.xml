@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mule xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+<mule xmlns:dw="http://www.mulesoft.org/schema/mule/ee/dw" xmlns:data-mapper="http://www.mulesoft.org/schema/mule/ee/data-mapper" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/apikit" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:spring="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
 http://www.mulesoft.org/schema/mule/apikit http://www.mulesoft.org/schema/mule/apikit/current/mule-apikit.xsd
 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
-http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd">
+http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schema/mule/ee/data-mapper/current/mule-data-mapper.xsd
+http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee/dw/current/dw.xsd">
     <http:listener-config name="o2_ccp_publisher_api-httpListenerConfig" host="0.0.0.0" port="8082" doc:name="HTTP Listener Configuration"/>
     <apikit:config name="o2_ccp_publisher_api-config" raml="o2_ccp_publisher_api.raml" consoleEnabled="true" consolePath="console" doc:name="Router"/>
     <data-mapper:config name="JSON_To_JSON" transformationGraphPath="json_to_json_1.grf" doc:name="JSON_To_JSON"/>
@@ -14,13 +15,17 @@ http://www.mulesoft.org/schema/mule/ee/data-mapper http://www.mulesoft.org/schem
         <exception-strategy ref="o2_ccp_publisher_api-apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy"/>
     </flow>
     <flow name="post:/ccp_subscriber:application/json:o2_ccp_publisher_api-config">
-        <data-mapper:transform config-ref="JSON_To_JSON" doc:name="JSON To JSON"/>
-        <http:request config-ref="O2_Subscriber_HTTP_Request_Configuration" path="/ccp_subscriber" method="PUT" doc:name="O2_Subscriber">
+        <dw:transform-message doc:name="Transform Message">
+            <dw:set-payload resource="classpath:XformPublisherRequest.dwl"></dw:set-payload>
+        </dw:transform-message>
+        <logger message="#[payload]" level="INFO" doc:name="Logger"/>
+        <!-- <http:request config-ref="O2_Subscriber_HTTP_Request_Configuration" path="/ccp_subscriber" method="PUT" doc:name="O2_Subscriber">
             <http:request-builder>
                 <http:header headerName="mcd-sourceApp" value="O2 Wifi"/>
                 <http:header headerName="mcd-correlationid" value="#[message.correlationId]"/>
             </http:request-builder>
-        </http:request>
+        </http:request> -->
+        <!-- <data-mapper:transform config-ref="JSON_To_JSON" doc:name="JSON To JSON"/> -->
     </flow>
     <apikit:mapping-exception-strategy name="o2_ccp_publisher_api-apiKitGlobalExceptionMapping">
         <apikit:mapping statusCode="404">
